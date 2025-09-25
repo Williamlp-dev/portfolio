@@ -34,7 +34,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <img
             alt={project.title}
             className="h-full w-full object-cover"
+            height={256}
             src={project.image}
+            width={400}
           />
         </div>
 
@@ -82,14 +84,23 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 Demo
               </a>
             </Button>
-            <Button asChild size="sm" variant="outline">
-              <a
-                href={project.github}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
+            <Button
+              asChild={!project.isPrivate}
+              disabled={project.isPrivate}
+              size="sm"
+              variant="outline"
+            >
+              {project.isPrivate ? (
                 <Github className="h-4 w-4" />
-              </a>
+              ) : (
+                <a
+                  href={project.github}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+              )}
             </Button>
           </div>
         </div>

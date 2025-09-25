@@ -19,6 +19,7 @@ export type Project = {
   github: string
   demo: string
   status: "Concluído" | "Em desenvolvimento"
+  isPrivate: boolean
 }
 
 const projects: Project[] = [
@@ -26,33 +27,54 @@ const projects: Project[] = [
     id: 1,
     title: "N1 Burguer",
     description:
-      "Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos e integração com APIs de frete.",
+      "Plataforma completa de delivery para hamburgueria premium,integração com WhatsApp e painel administrativo avançado. Foco em conversão e experiência mobile.",
     image: "/n1burguer.png",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    tags: [
+      "Next.js",
+      "React 19",
+      "Prisma",
+      "Zustand",
+      "Tailwind CSS",
+      "NextAuth.js",
+    ],
     category: "Full Stack",
     icon: ShoppingCart,
     color: "text-blue-500",
     year: "2024",
-    features: ["Pagamentos", "Dashboard", "Mobile-First"],
+    features: ["WhatsApp API", "Real-time", "Analytics", "Mobile-First"],
     github: "",
     demo: "https://n1burguer.com.br",
     status: "Concluído",
+    isPrivate: true,
   },
   {
     id: 2,
     title: "Kebrada Burguer",
     description:
-      "Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos e integração com APIs de frete.",
+      "Sistema de pedidos online otimizado para hamburguerias, com carrinho inteligente e sistema de cupons. Arquitetura escalável para alto volume de pedidos.",
     image: "/kebradaburguer.png",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    tags: [
+      "Next.js",
+      "React 19",
+      "Prisma",
+      "Zustand",
+      "Tailwind CSS",
+      "NextAuth.js",
+    ],
     category: "Full Stack",
     icon: ShoppingCart,
     color: "text-blue-500",
     year: "2024",
-    features: ["Pagamentos", "Dashboard", "Mobile-First"],
+    features: [
+      "Cupons",
+      "Carrinho Inteligente",
+      "Escalabilidade",
+      "Performance",
+    ],
     github: "",
     demo: "https://kebradaburguer.com.br",
     status: "Concluído",
+    isPrivate: true,
   },
 ]
 
