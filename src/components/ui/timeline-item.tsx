@@ -1,17 +1,7 @@
-// src/components/timeline/TimelineItem.tsx
-
 import { motion } from "framer-motion"
-import {
-  Briefcase,
-  Calendar,
-  Code,
-  GraduationCap,
-  LucideIcon,
-  MapPin,
-} from "lucide-react"
-import type { TimelineEvent } from "@/components/sections/timeline" // Importa o tipo do arquivo principal
+import { Briefcase, Calendar, MapPin } from "lucide-react"
+import type { TimelineEvent } from "@/components/sections/timeline"
 
-// Funções de estilo que pertencem a este componente
 const getTypeColor = (type: string) => {
   switch (type) {
     case "work":
@@ -34,7 +24,6 @@ const getTypeBackground = (type: string) => {
   }
 }
 
-// Variantes da animação para cada item
 const itemVariants = {
   hidden: { x: -50, opacity: 0 },
   visible: {
