@@ -1,12 +1,9 @@
-// src/components/timeline/index.tsx
-
 "use client"
 
 import { motion } from "framer-motion"
 import { Briefcase, Code, GraduationCap, type LucideIcon } from "lucide-react"
 import { TimelineItem } from "@/components/ui/timeline-item"
 
-// 1. Definir e exportar o tipo para ser usado pelo componente filho
 export type TimelineEvent = {
   type: "education" | "work"
   icon: LucideIcon
@@ -19,7 +16,6 @@ export type TimelineEvent = {
   tech: string[]
 }
 
-// 2. Manter os dados aqui
 const timelineData: TimelineEvent[] = [
   {
     type: "education",
@@ -107,7 +103,6 @@ const timelineData: TimelineEvent[] = [
   },
 ]
 
-// Animação para o container
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -130,7 +125,6 @@ export default function TimelineSection() {
             viewport={{ once: true }}
             whileInView={{ opacity: 1 }}
           >
-            {/* Cabeçalho da seção */}
             <motion.div
               className="mb-16 text-center"
               initial={{ y: 20, opacity: 0 }}
@@ -163,7 +157,6 @@ export default function TimelineSection() {
               </motion.p>
             </motion.div>
 
-            {/* Corpo da Timeline */}
             <motion.div
               className="relative mx-auto max-w-4xl"
               initial="hidden"
@@ -171,12 +164,10 @@ export default function TimelineSection() {
               viewport={{ once: true }}
               whileInView="visible"
             >
-              {/* Linha vertical da timeline */}
               <div className="md:-translate-x-1/2 absolute top-0 bottom-0 left-4 w-px bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 md:left-1/2 md:transform" />
 
-              {/* 3. Mapeamento para o novo componente */}
               {timelineData.map((item, index) => (
-                <TimelineItem index={index} item={item} key={index} />
+                <TimelineItem index={index} item={item} key={item.title} />
               ))}
             </motion.div>
           </motion.div>
