@@ -27,15 +27,40 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({ name: "", email: "", subject: "", message: "" })
-    }, 3000)
+      const result = await response.json()
+
+      if (!response.ok) {
+        const errorMessage =
+          result.details || result.error || "Erro ao enviar mensagem"
+        throw new Error(errorMessage)
+      }
+
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+
+      const CLEAR_FORM_DELAY = 3000
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      }, CLEAR_FORM_DELAY)
+    } catch (error) {
+      setIsSubmitting(false)
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Erro ao enviar mensagem. Tente novamente."
+      alert(errorMessage)
+    }
   }
 
   return (
