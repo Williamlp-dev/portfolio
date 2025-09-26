@@ -12,11 +12,11 @@ type NavItem = {
 }
 
 const navItems: NavItem[] = [
-  { name: "Inicio", href: "#" },
-  { name: "Sobre", href: "#" },
-  { name: "Skills", href: "#" },
-  { name: "Projetos", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Inicio", href: "#hero" },
+  { name: "Sobre", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projetos", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ]
 
 export default function Header() {
