@@ -15,6 +15,7 @@ import {
 export default function AboutSection() {
   const skills = [
     {
+      id: "dev",
       icon: Code2,
       title: "Desenvolvimento",
       description:
@@ -23,6 +24,7 @@ export default function AboutSection() {
       bgColor: "bg-blue-500/10",
     },
     {
+      id: "ui-ux",
       icon: Palette,
       title: "UI/UX Design",
       description: "Interfaces simples, diretas e pensadas para o usuário real",
@@ -30,6 +32,7 @@ export default function AboutSection() {
       bgColor: "bg-purple-500/10",
     },
     {
+      id: "performance",
       icon: Rocket,
       title: "Performance",
       description: "Código enxuto, carregamento rápido e bom uso de recursos",
@@ -37,6 +40,7 @@ export default function AboutSection() {
       bgColor: "bg-orange-500/10",
     },
     {
+      id: "collaboration",
       icon: Users,
       title: "Colaboração",
       description:
@@ -47,16 +51,43 @@ export default function AboutSection() {
   ]
 
   const stats = [
-    { number: "1+", label: "Anos de Experiência", icon: Target },
-    { number: "3+", label: "Projetos Concluídos", icon: Rocket },
-    { number: "15+", label: "Tecnologias", icon: Code2 },
-    { number: "∞", label: "Aprendizado constante", icon: BookOpen },
+    {
+      id: "experience",
+      number: "1+",
+      label: "Anos de Experiência",
+      icon: Target,
+    },
+    {
+      id: "projects",
+      number: "3+",
+      label: "Projetos Concluídos",
+      icon: Rocket,
+    },
+    { id: "techs", number: "15+", label: "Tecnologias", icon: Code2 },
+    {
+      id: "learning",
+      number: "∞",
+      label: "Aprendizado constante",
+      icon: BookOpen,
+    },
   ]
 
   const passions = [
-    { icon: Heart, text: "Refatorar até que o código faça sentido" },
-    { icon: Zap, text: "Micro melhorias que somam em velocidade" },
-    { icon: Users, text: "Boas conversas constroem bons sistemas" },
+    {
+      id: "refactor",
+      icon: Heart,
+      text: "Refatorar até que o código faça sentido",
+    },
+    {
+      id: "micro-improvements",
+      icon: Zap,
+      text: "Micro melhorias que somam em velocidade",
+    },
+    {
+      id: "communication",
+      icon: Users,
+      text: "Boas conversas constroem bons sistemas",
+    },
   ]
 
   return (
@@ -74,14 +105,6 @@ export default function AboutSection() {
               Desenvolvedor & Criador
             </h2>
 
-            <motion.div
-              className="mx-auto mb-8 h-1 w-32 rounded-full bg-gradient-to-r from-primary to-secondary"
-              initial={{ width: 0 }}
-              transition={{ delay: 0.4, duration: 1 }}
-              viewport={{ once: true }}
-              whileInView={{ width: "100%" }}
-            />
-
             <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground leading-relaxed md:text-xl">
               Gosto de resolver problemas com código e transformar ideias em
               produtos que funcionam de verdade. Meu foco é entregar soluções
@@ -89,7 +112,6 @@ export default function AboutSection() {
               realmente importa para o usuário.
             </p>
 
-            {/* Passions */}
             <motion.div
               className="flex flex-wrap justify-center gap-4"
               initial={{ opacity: 0, y: 20 }}
@@ -101,7 +123,7 @@ export default function AboutSection() {
                 <motion.div
                   className="flex items-center gap-2 rounded-full border border-border/50 bg-muted/50 px-3 py-2 transition-all duration-300 hover:border-primary/30"
                   initial={{ opacity: 0, scale: 0.8 }}
-                  key={index}
+                  key={passion.id}
                   transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
@@ -127,7 +149,7 @@ export default function AboutSection() {
               <motion.div
                 className="group relative rounded-2xl border border-border/50 bg-card/50 p-6 text-center transition-all duration-300 hover:border-primary/30 hover:shadow-lg"
                 initial={{ opacity: 0, scale: 0.8 }}
-                key={index}
+                key={stat.id}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5, scale: 1.05 }}
@@ -175,7 +197,7 @@ export default function AboutSection() {
               <motion.div
                 className="group relative overflow-hidden rounded-2xl border bg-card/50 p-6 transition-all duration-300 hover:shadow-xl"
                 initial={{ opacity: 0, y: 30 }}
-                key={index}
+                key={skill.id}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -8, scale: 1.02 }}
@@ -231,10 +253,12 @@ export default function AboutSection() {
                 whileInView={{ scale: 1 }}
               >
                 <svg
+                  aria-hidden="true"
                   className="h-full w-full"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
+                  <title>Quote Icon</title>
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
                 </svg>
               </motion.div>
