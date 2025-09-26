@@ -53,7 +53,7 @@ export default function AboutSection() {
   const stats = [
     {
       id: "experience",
-      number: "1+",
+      number: "2.5+",
       label: "Anos de Experiência",
       icon: Target,
     },
@@ -106,10 +106,10 @@ export default function AboutSection() {
             </h2>
 
             <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground leading-relaxed md:text-xl">
-              Gosto de resolver problemas com código e transformar ideias em
-              produtos que funcionam de verdade. Meu foco é entregar soluções
-              simples, funcionais e bem pensadas — sempre com atenção ao que
-              realmente importa para o usuário.
+              Desenvolvedor Full-Stack com 2.5 anos de experiência em projetos
+              freelancer. Especializado em TypeScript, Next.js e React, sou
+              proativo e focado em entregar soluções de alta performance. Busco
+              colaborar em equipe e desenvolver produtos inovadores.
             </p>
 
             <motion.div
@@ -284,7 +284,7 @@ export default function AboutSection() {
                 >
                   <div className="h-px w-8 bg-gradient-to-r from-transparent to-primary/50" />
                   <span className="font-medium text-muted-foreground">
-                    William Lopes
+                    William Lopes da Silva
                   </span>
                   <div className="h-px w-8 bg-gradient-to-l from-transparent to-primary/50" />
                 </motion.div>

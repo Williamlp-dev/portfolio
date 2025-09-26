@@ -50,32 +50,32 @@ const timelineData: TimelineEvent[] = [
   {
     type: "education",
     icon: Code,
-    title: "Desenvolvedor Mobile Líder - Projeto EcoPoints",
+    title: "Desenvolvedor Mobile Líder - Projeto EcoBank",
     company: "Uninassau (Projeto Acadêmico)",
     location: "Paulista - PE",
     period: "2024",
     description:
-      "Liderança no desenvolvimento de app mobile com React Native e Expo para projeto da ODS (Vida na Água).",
+      "App de gamificação de reciclagem, desenvolvido como único dev em uma equipe de 12 pessoas e apresentado a empresários.",
     achievements: [
       "Desenvolvimento completo do aplicativo mobile.",
-      "Coordenação técnica em equipe multidisciplinar.",
+      "Apresentação do projeto para empresários locais.",
     ],
-    tech: ["React Native", "Expo", "Tailwind CSS", "PostgreSQL", "Github"],
+    tech: ["React Native", "Expo", "SQL", "Tailwind CSS"],
   },
   {
     type: "education",
     icon: GraduationCap,
-    title: "Conclusão da Graduação em ADS",
+    title: "Projeto Final - CogniTec (Web)",
     company: "Uninassau",
     location: "Paulista - PE",
     period: "Jun 2025",
     description:
-      "Projeto final com site completo e CRUD de usuários, utilizando tecnologias modernas de mercado.",
+      "Site completo com CRUD de usuários para aprofundar conhecimentos no ecossistema full-stack moderno.",
     achievements: [
       "Desenvolvimento full stack com Next.js e TypeScript.",
-      "Entrega de projeto funcional e escalável.",
+      "Implementação de CRUD completo de usuários.",
     ],
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Docker", "Github"],
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
   },
   {
     type: "work",
@@ -83,23 +83,15 @@ const timelineData: TimelineEvent[] = [
     title: "Desenvolvedor Full Stack Freelancer",
     company: "Projetos Autônomos",
     location: "Remoto",
-    period: "2025 - Presente",
+    period: "Dez 2024 - Jun 2025",
     description:
-      "Criação e manutenção de sistemas web focados em cardápios digitais, transformando projetos em soluções SaaS escaláveis.",
+      "Desenvolvimento de sistemas de cardápio digital para hamburguerias, com foco em alta performance e experiência do usuário.",
     achievements: [
-      "Desenvolvimento de dois sistemas de cardápio digital (N1 Burger e Kebrada Burguer).",
-      "Painéis administrativos para gestão completa de produtos e promoções.",
-      "Atuação full stack, do front ao back-end.",
+      "N1 Burger: Principal responsável pelo front-end com UI/UX fluida.",
+      "Kebrada Burguer: Desenvolvimento completo independente (front e back-end).",
+      "Painéis administrativos com gerenciamento avançado de produtos e promoções.",
     ],
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "React",
-      "Docker",
-      "Tailwind CSS",
-      "Github",
-    ],
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "React", "Tailwind CSS"],
   },
 ]
 

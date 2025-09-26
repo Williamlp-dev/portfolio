@@ -11,6 +11,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import ResumeDialog from "@/components/ui/resume-dialog"
 
 export default function HeroSection() {
   return (
@@ -37,7 +38,7 @@ export default function HeroSection() {
                 stiffness: 100,
               }}
             >
-              William Lopes
+              William Lopes da Silva
             </motion.h1>
 
             <motion.p
@@ -60,10 +61,12 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button className="btn-press group px-6 py-6 text-base">
-                  Ver Projetos
-                  <MoveRight className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-1" />
-                </Button>
+                <Link href="#projects">
+                  <Button className="btn-press group px-6 py-6 text-base">
+                    Ver Projetos
+                    <MoveRight className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </motion.div>
 
               <motion.div
@@ -71,13 +74,15 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button
-                  className="btn-press group px-6 py-6 text-base"
-                  variant="outline"
-                >
-                  Download CV
-                  <MoveDown className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-1" />
-                </Button>
+                <ResumeDialog>
+                  <Button
+                    className="btn-press group px-6 py-6 text-base"
+                    variant="outline"
+                  >
+                    Ver Currículo
+                    <MoveDown className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-1" />
+                  </Button>
+                </ResumeDialog>
               </motion.div>
             </motion.div>
 
@@ -110,7 +115,7 @@ export default function HeroSection() {
                 </motion.div>
               </Link>
 
-              <Link href="mailto:williamlopes.dev@gmail.com">
+              <Link href="mailto:williamlp.dev@gmail.com">
                 <motion.div
                   className="rounded-lg bg-muted p-2.5 transition-colors hover:bg-primary/10"
                   whileHover={{ scale: 1.1, y: -2 }}
