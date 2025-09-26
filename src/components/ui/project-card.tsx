@@ -21,7 +21,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         viewport={{ once: true }}
         whileInView={{ scale: 1, opacity: 1 }}
       >
-        {/* Status Badge */}
         <Badge
           className="absolute top-3 right-3 z-20"
           variant={project.status === "Concluído" ? "default" : "secondary"}
@@ -29,7 +28,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {project.status}
         </Badge>
 
-        {/* Image Section */}
         <div className="relative h-64 w-full overflow-hidden">
           <img
             alt={project.title}
@@ -40,9 +38,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           />
         </div>
 
-        {/* Content Section */}
         <div className="space-y-4 p-6">
-          {/* Header */}
           <div className="flex items-center gap-3">
             <div className={`rounded-lg p-2 ${project.color}`}>
               <Icon className="h-5 w-5" />
@@ -58,12 +54,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </div>
           </div>
 
-          {/* Description */}
           <p className="line-clamp-3 text-muted-foreground text-sm leading-relaxed">
             {project.description}
           </p>
 
-          {/* Tags */}
           <div className="flex flex-wrap gap-1.5">
             {project.tags.map((tag) => (
               <Badge
@@ -76,12 +70,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             ))}
           </div>
 
-          {/* Actions */}
           <div className="flex gap-2 pt-2">
             <Button asChild className="flex-1" size="sm">
               <a href={project.demo} rel="noopener noreferrer" target="_blank">
                 <ExternalLink className="mr-2 h-4 w-4" />
-                Demo
+                Visitar Site
               </a>
             </Button>
             <Button
