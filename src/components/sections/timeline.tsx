@@ -87,7 +87,7 @@ const timelineData: TimelineEvent[] = [
     description:
       "Desenvolvimento de sistemas de cardápio digital para hamburguerias, com foco em alta performance e experiência do usuário.",
     achievements: [
-      "N1 Burger: Principal responsável pelo front-end com UI/UX fluida.",
+      "N1 Burguer: Principal responsável pelo front-end com UI/UX fluida.",
       "Kebrada Burguer: Desenvolvimento completo independente (front e back-end).",
       "Painéis administrativos com gerenciamento avançado de produtos e promoções.",
     ],
