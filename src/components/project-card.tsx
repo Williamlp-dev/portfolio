@@ -105,8 +105,10 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
         <ImagePreview
           alt={`Preview do projeto ${project.title}`}
           className="h-full w-full"
+          height={project.imageHeight}
           imageClassName="object-top rounded-lg bg-surface-raised"
           src={project.image}
+          width={project.imageWidth}
         />
       </div>
 

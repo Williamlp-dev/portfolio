@@ -133,6 +133,7 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scrollbar-gutter: stable;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
   }
@@ -152,6 +153,7 @@
     width: 4px;
     height: 4px;
   }
+  
   ::-webkit-scrollbar-track {
     background: transparent;
   }
@@ -202,4 +204,6 @@
     color: var(--foreground-subtle);
     letter-spacing: 0.02em;
   }
+
 }
+

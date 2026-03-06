@@ -5,6 +5,8 @@ export type Project = {
   description: string
   tags: string[]
   image: string
+  imageWidth: number
+  imageHeight: number
   siteUrl: string
   githubUrl: string
 }
@@ -18,6 +20,8 @@ export const projects: Project[] = [
       "Plataforma SaaS construída com Next.js e PostgreSQL, processando mais de R$ 350 mil em receita nos primeiros 3 meses e suportando 30 mil+ visitantes mensais. Inclui painel admin completo com gestão de estoque e promoções em tempo real. IA Generativa integrada ao ciclo de desenvolvimento, reduzindo entregas complexas de 2 semanas para 1–3 dias (+300% de eficiência).",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
     image: "/kebrada-showcase.png",
+    imageWidth: 1920,
+    imageHeight: 1080,
     siteUrl: "https://kebradaburguer.com.br",
     githubUrl: "https://github.com/Williamlp-dev",
   },
@@ -29,6 +33,8 @@ export const projects: Project[] = [
       "Aplicação frontend de alto tráfego suportando 30 mil+ acessos mensais. Liderei toda a engenharia frontend com melhorias de UX focadas em otimização de taxa de conversão e retenção de usuários.",
     tags: ["Next.js", "React", "TypeScript"],
     image: "/n1-showcase.png",
+    imageWidth: 1920,
+    imageHeight: 1080,
     siteUrl: "https://n1burguer.com.br",
     githubUrl: "https://github.com/Williamlp-dev",
   },
