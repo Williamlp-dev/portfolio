@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "Aplicação frontend de alto tráfego suportando 30 mil+ acessos mensais. Liderei toda a engenharia frontend com melhorias de UX focadas em otimização de taxa de conversão e retenção de usuários.",
     tags: ["Next.js", "React", "TypeScript"],
     image: "/n1-showcase.png",
-    siteUrl: "https://n1burger.com.br",
+    siteUrl: "https://n1burguer.com.br",
     githubUrl: "https://github.com/Williamlp-dev",
   },
 ]
