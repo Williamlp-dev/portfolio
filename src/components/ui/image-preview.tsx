@@ -323,25 +323,21 @@ export function ImagePreview({
             <span className="sr-only">Fechar preview</span>
           </Button>
 
-          <button
-            className="cursor-zoom-out"
+          {/* biome-ignore lint/performance/noImgElement: clone image requires direct position:fixed + transform for zoom animation — Next.js Image with fill conflicts with the animation system */}
+          {/* biome-ignore lint/correctness/useImageSize: dimensions are set dynamically via getCloneStyles() inline style (position:fixed with explicit width/height from originRect) */}
+          {/* biome-ignore lint/a11y/noNoninteractiveElementInteractions: img needs onClick to close preview when user clicks the zoomed image */}
+          <img
+            alt={alt}
+            className={cn(
+              "cursor-zoom-out object-cover transition-[transform] duration-350 ease-[cubic-bezier(0.32,0.72,0,1)] will-change-transform",
+              imageClassName
+            )}
             onClick={handleClose}
             onKeyDown={handleKeyDown}
+            ref={cloneRef}
+            src={src}
             style={getCloneStyles()}
-            type="button"
-          >
-            <Image
-              alt={alt}
-              className={cn(
-                "object-cover transition-[transform] duration-350 ease-[cubic-bezier(0.32,0.72,0,1)] will-change-transform",
-                imageClassName
-              )}
-              fill
-              ref={cloneRef}
-              sizes="(max-width: 768px) 100vw, 90vw"
-              src={src}
-            />
-          </button>
+          />
         </div>
       ) : null}
     </>
