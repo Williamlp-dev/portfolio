@@ -11,12 +11,12 @@ type SocialLink = {
 
 const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: "https://github.com/williamlp",
+    href: "https://github.com/Williamlp-dev",
     label: "GitHub",
     icon: <Github />,
   },
   {
-    href: "https://linkedin.com/in/williamlp",
+    href: "https://www.linkedin.com/in/william-lopes-5537792a1",
     label: "LinkedIn",
     icon: <Linkedin />,
   },

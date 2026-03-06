@@ -153,7 +153,7 @@
     width: 4px;
     height: 4px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
@@ -204,6 +204,4 @@
     color: var(--foreground-subtle);
     letter-spacing: 0.02em;
   }
-
 }
-
