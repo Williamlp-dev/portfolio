@@ -8,7 +8,7 @@ type ExperienceItemProps = {
 }
 
 function ExperienceItem({ experience }: ExperienceItemProps): JSX.Element {
-  const { role, company, period, logo, description, type } = experience
+  const { role, company, period, logo, description } = experience
 
   return (
     <div className="-mx-4 flex flex-col gap-1.5 rounded-lg px-4 py-3 transition-colors duration-(--duration-base) ease-out">
@@ -34,7 +34,7 @@ function ExperienceItem({ experience }: ExperienceItemProps): JSX.Element {
           {company}
         </span>
       </div>
-      {description && type === "work" ? (
+      {description ? (
         <p className="mt-1.5 max-w-lg text-foreground-muted text-sm leading-relaxed">
           {description}
         </p>

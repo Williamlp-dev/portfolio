@@ -69,11 +69,12 @@ export const experiences: Experience[] = [
     type: "work",
   },
   {
-    role: "Análise e Desenvolvimento de Sistemas",
+    role: "Formação Acadêmica: Análise e Desenvolvimento de Sistemas",
     company: "Uninassau",
     period: "2022 — 2025",
     logo: "/uninassau-logo.png",
-    description: "",
+    description:
+      "Tecnólogo em Análise e Desenvolvimento de Sistemas. Envolvimento em diversos projetos acadêmicos de desenvolvimento web utilizando Python e Django, desenvolvimento robótico e lógica de programação avançada. Atuei também na liderança de equipe por mais de 6 meses, focando em estruturação de projetos e condução de apresentações de forma limpa.",
     type: "education",
   },
 ]
