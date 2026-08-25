@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# William Lopes da Silva — Portfolio
 
-## Getting Started
+> Full-Stack por escolha, não por conveniência. Gosto do lado inteiro do problema — da arquitetura à interface que o usuário realmente vai usar.
 
-First, run the development server:
+🌐 [williamlopes.dev.br](https://www.williamlopes.dev.br) · 📍 Pernambuco, BR · ✉️ contato@williamlopes.dev.br
+
+---
+
+## Sobre
+
+Portfolio pessoal desenvolvido com **Next.js 16**, apresentando minha trajetória, projetos e stack técnica.
+
+Stack utilizada no portfólio em si:
+
+- **Framework**: Next.js 16 (App Router)
+- **Linguagem**: TypeScript
+- **Estilização**: Tailwind CSS v4
+- **Animações**: Motion (Framer Motion)
+- **Tema**: next-themes (dark/light)
+- **Fonte**: Urbane (local, woff2)
+- **Linter/Formatter**: Biome
+
+---
+
+## Experiência
+
+### Kebrada Burguer · Full-Stack · Mar–Jun 2025
+SaaS de cardápio digital construído do zero. Infraestrutura com Docker, painel admin completo com gestão de estoque e promoções em tempo real.
+
+### N1 Burger · Front-End · Dez 2024–Mar 2025
+Aplicação de alto tráfego com 30k+ visitas mensais. Liderança do frontend com foco em UX, conversão e retenção.
+
+---
+
+## Projetos
+
+### [Cardápio Digital — Kebrada Burguer](https://www.kebradaclub.com.br)
+Plataforma SaaS com Next.js e PostgreSQL. +R$ 350k em receita nos primeiros 3 meses, 30k+ visitantes/mês, painel admin completo e IA integrada ao ciclo de dev (+300% eficiência).
+
+`Next.js` `TypeScript` `PostgreSQL` `Docker`
+
+### Cardápio Digital — N1 Burger *(privado)*
+Frontend de alto tráfego com 30k+ acessos mensais. Melhorias de UX focadas em conversão e retenção.
+
+`Next.js` `React` `TypeScript`
+
+---
+
+## Skills
+
+`React` `Next.js` `TypeScript` `Node.js` `Python` `Docker` `PostgreSQL` `Drizzle ORM` `Fastify` `Prisma` `NestJS` `React Query` `Tailwind CSS` `Flutter` `Dart` `Cloudflare` `Vercel`
+
+---
+
+## Formação
+
+**Uninassau** — Tecnólogo em Análise e Desenvolvimento de Sistemas · 2022–2025
+
+---
+
+## Rodando localmente
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contato
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- GitHub: [@Williamlp-dev](https://github.com/Williamlp-dev)
+- LinkedIn: [william-lopes-5537792a1](https://www.linkedin.com/in/william-lopes-5537792a1)
+- E-mail: [contato@williamlopes.dev.br](mailto:contato@williamlopes.dev.br)

@@ -1,69 +1,99 @@
-import Image from "next/image";
+import BlurFade from "@/components/blur-fade";
+import BlurFadeText from "@/components/blur-fade-text";
+import ContactSection from "@/components/section/contact-section";
+import EducationSection from "@/components/section/education-section";
+import ProjectsSection from "@/components/section/projects-section";
+import WorkSection from "@/components/section/work-section";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { TechIcon } from "@/components/ui/tech-icon";
+import { DATA } from "@/data/resume";
 
-export default function Home() {
+const BLUR_FADE_DELAY = 0.04;
+
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main className="min-h-dvh flex flex-col gap-14 relative">
+      <section id="hero">
+        <div className="mx-auto w-full max-w-2xl space-y-8">
+          <div className="gap-2 gap-y-6 flex flex-col md:flex-row md:items-center justify-between">
+            <div className="gap-2 flex flex-col order-2 md:order-1">
+              <BlurFadeText
+                delay={BLUR_FADE_DELAY}
+                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
+                yOffset={8}
+                text={`Olá, eu sou o ${DATA.name.split(" ")[0]}`}
+              />
+              <BlurFadeText
+                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
+                delay={BLUR_FADE_DELAY}
+                text={DATA.description}
+              />
+            </div>
+            <BlurFade
+              delay={BLUR_FADE_DELAY}
+              className="order-1 md:order-2 shrink-0"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
+                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                <AvatarFallback>{DATA.initials}</AvatarFallback>
+              </Avatar>
+            </BlurFade>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+      <section id="work">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">Experiência Profissional</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 6}>
+            <WorkSection />
+          </BlurFade>
         </div>
-      </main>
-    </div>
+      </section>
+      <section id="education">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Formação Acadêmica</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 8}>
+            <EducationSection />
+          </BlurFade>
+        </div>
+      </section>
+      <section id="skills">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Habilidades</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-2">
+            {DATA.skills.map((skill, id) => (
+              <BlurFade
+                key={skill.name}
+                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+              >
+                <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2">
+                  <TechIcon tech={skill.name} size={16} />
+                  <span className="text-foreground text-sm font-medium">
+                    {skill.name}
+                  </span>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <ProjectsSection />
+        </BlurFade>
+      </section>
+
+      <section id="contact">
+        <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <ContactSection />
+        </BlurFade>
+      </section>
+    </main>
   );
 }
